@@ -11,6 +11,7 @@ export class ServersComponent {
   serverName: string = ''
   allowViewServer: boolean = false ;
   serverCreationStatus = 'No server was created'
+  servers = ["testServer", "devServer", "prodServer"]
 
   constructor(){
     setTimeout(()=>{
