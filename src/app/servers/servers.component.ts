@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
 
+  serverCreated = false ;
   serverName: string = ''
   allowViewServer: boolean = false ;
   serverCreationStatus = 'No server was created'
@@ -14,11 +15,12 @@ export class ServersComponent {
   constructor(){
     setTimeout(()=>{
       this.allowViewServer = true;
-    },2000)
+    },100000)
   }
 
   onCreateServer(){
     this.serverCreationStatus = 'Server was created'
+    this.serverCreated = true ;
   }
 
   onUpdateServerName(event: Event) {
